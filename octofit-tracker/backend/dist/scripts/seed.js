@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.seedDatabase = seedDatabase;
-const db_1 = require("../db");
+const database_1 = require("../database");
 const models_1 = require("../models");
 // Seed the octofit_db database with test data
 async function seedDatabase() {
-    await (0, db_1.connectToDatabase)();
+    await (0, database_1.connectToDatabase)();
     await Promise.all([
         models_1.User.deleteMany({}),
         models_1.Team.deleteMany({}),
